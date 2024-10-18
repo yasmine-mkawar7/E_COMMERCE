@@ -10,15 +10,15 @@ class ArticleController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
-    {
+    public function index() 
+    { 
         try { 
-            $articles=Article::with('scategorie')->get(); // Inclut la sous catégorie liée; 
-                
-               return response()->json($articles,200); 
-           } catch (\Exception $e) { 
-           return response()->json("Sélection impossible {$e->getMessage()}"); 
-           }
+         $articles=Article::with('scategorie')->get(); // Inclut la sous catégorie liée; 
+             
+            return response()->json($articles,200); 
+        } catch (\Exception $e) { 
+        return response()->json("Sélection impossible {$e->getMessage()}"); 
+        } 
     }
     public function showArticlesBySCAT($idscat) 
     { 

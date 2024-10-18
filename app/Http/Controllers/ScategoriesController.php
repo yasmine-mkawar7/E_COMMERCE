@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\scategories;
+use App\Models\Scategories;
 use Illuminate\Http\Request;
 
 class ScategoriesController extends Controller

@@ -13,6 +13,6 @@ class Categorie extends Model
         "imagecategorie"
     ];
     public function scategorie(){
-        return $this->hasMany(scategories::class,"categoriesID");
+        return $this->hasMany(Scategories::class,"categoriesID");
     }
 }
