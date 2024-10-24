@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 class ScategoriesController extends Controller
 {
     /**
-     * Display a listing of the resource.
+     * Display a listing of the resource
      */
     public function index()
     {
@@ -62,7 +62,7 @@ class ScategoriesController extends Controller
     public function update(Request $request, $id)
 {
 try {
-$scategorie=Scategories::findorFail($id);
+$scategorie=Scategories::findOrFail($id);
 $scategorie->update($request->all());
 return response()->json($scategorie);
 } catch (\Exception $e) {
